@@ -1,0 +1,124 @@
+.user-nav {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  letter-spacing: 0;
+
+  li {
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  a {
+    @include not-hover;
+    padding: 10px 0;
+    text-decoration: none;
+    
+
+    &:hover,
+    &:focus {
+      @include hover;
+      color: $orange;
+    }
+  }
+}
+
+
+.user-nav__button {
+  display: none;
+}
+
+@media (max-width: $desktop-max-width - 1) {
+
+  .user-nav__button {
+    display: block;
+    width: 39px;
+    height: 30px;
+    padding: 0;
+    background-image: url("../img/burger.png");
+    background-repeat: no-repeat;
+    border: none;
+    background-color: transparent;
+    background-position: right center;
+
+    &--open {
+      background-image: url("../img/cross.png");
+    }
+
+    
+    &:hover,
+    &:focus {
+      @include hover;
+    }
+  }
+
+  .user-nav {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    flex-direction: column;
+    padding: 20px 0;
+    font-weight: 500;
+    color: #000000;
+    background-color: $white;
+    border-radius: 10px;
+    border-top-right-radius: 0;
+
+    &--open {
+      display: flex;
+    }
+
+    li {
+      margin-right: 0;
+    }
+
+    a {
+      display: inline-block;
+      padding: 12px 40px 12px 29px;
+    }
+  }
+
+}
+
+@media (max-width: $desktop-min-width - 1) {
+
+  .user-nav {
+    position: static;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 0;
+    padding-top: 15px;
+    font-weight: 400;
+    background-color: transparent;
+    color: $white;
+    border-radius: 0;
+
+    li {
+      margin-bottom: 5px;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      padding: 10px;
+
+      &:hover,
+      &:focus {
+        color: $white;
+      }
+    }
+  }
+
+  .user-nav__button {
+    display: none;
+  }
+
+}
+

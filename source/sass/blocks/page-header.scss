@@ -1,0 +1,201 @@
+.page-header {
+  position: absolute;
+  width: 100%;
+}
+
+.page-header__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 10px;
+  @include font(16, 21);
+  color: $white;
+  letter-spacing: 0.02em;
+}
+
+
+.page-heaer__logo {
+  display: flex;
+  margin-right: 3.1%;
+}
+
+.page-header__city {
+  margin-right: 2.8%;
+}
+
+.page-header__phone {
+  @include not-hover;
+  margin-right: 2.3%;
+  padding: 10px 0;
+  text-decoration: none;
+  padding-left: 19px;
+  background-image: url("../img/phone.png");
+  background-repeat: no-repeat;
+  background-position: left top 13px;
+  
+
+  &:hover,
+  &:focus {
+    @include hover;
+    background-image: url("../img/phone-hover.png");
+  }
+}
+
+.page-header__nav-button {
+  display: none;
+}
+
+.page-header__nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.page-header__teachers-link {
+  @include font(12, 16);
+  @include not-hover;
+  min-width: 200px;
+  margin-left: auto;
+  margin-right: 40px;
+  padding: 10px;
+  
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  border: 2px solid $orange;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    @include hover;
+    background-color: $orange;
+  }
+}
+
+@media (max-width: $desktop-max-width - 1) {
+
+  .page-heaer__logo {
+    margin-right: 3.5%;
+    
+    img {
+      width: 108px;
+      height: 108px;
+
+    }
+  }
+
+  .page-header__city {
+    margin-right: 4.9%;
+  }
+  
+  .page-header__phone {
+    margin-right: 3.5%;
+    
+  }
+
+  .page-header__nav {
+    position: relative;
+  }
+
+  .page-header__wrapper {
+    @include font(14, 18);
+    letter-spacing: 0;
+  }
+
+  .page-header__teachers-link {
+    @include font(10, 13);
+    min-width: 150px;
+    margin-left: 35px;
+    margin-right: auto;
+    padding: 11px;
+  }
+}
+
+@media (max-width: $desktop-min-width - 1) {
+
+  .page-header__wrapper {
+    @include font(16, 21);
+    justify-content: space-between;
+    padding: 10px 38px 0 30px;
+
+    &--menu-open {
+      background-color: $dark-bg;
+
+      .page-header__city {
+        color: transparent;
+      }
+    }
+  }
+
+  .page-heaer__logo {
+    margin-right: 7px;
+    
+    img {
+      width: 88px;
+      height: 88px;
+    }
+  }
+
+  .page-header__city {
+    @include font(14, 18);
+    margin-right: 0;
+    order: -1;
+  }
+
+  .page-header__phone {
+    display: none;
+  }
+
+  .page-header__nav-button {
+    display: block;
+    width: 39px;
+    height: 30px;
+   
+    padding: 0;
+    background-image: url("../img/burger.png");
+    background-repeat: no-repeat;
+    border: none;
+    background-color: transparent;
+    background-position: right center;
+
+    &--open {
+      background-image: url("../img/cross.png");
+    }
+
+    &:hover,
+    &:focus {
+      @include hover;
+    }
+  }
+
+  .page-header__nav {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 98px;
+    z-index: 10;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;;
+    padding: 31px 8px 30px;
+    background-color: $dark-bg;
+
+    &--open {
+      display: flex;
+    }
+  }
+
+  .page-header__teachers-link {
+    @include font(12, 16);
+    order: 1;
+    min-width: 200px;
+    margin: 0;
+    padding: 10px;
+    letter-spacing: 0.02em;
+  }
+}
+
+
+

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Преподам</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="Образовательная онлайн-платформа">
+  
+  <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserrat-medium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserrat-semibold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserrat-extrabold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+ 
+  <link href="css/style.min.css" rel="stylesheet">
+</head>
+<body>
+  <header class="page-header">
+    <div class="container page-header__wrapper">
+      <a class="page-heaer__logo">
+        <img src="img/header-logo.png" alt="Логотип компании" width="111" height="111">
+      </a>
+      
+      <span class="page-header__city">Москва</span>
+      <a href="tel:+78005623452" class="page-header__phone">+7 800-562-3452</a>
+      <button class="page-header__nav-button" aria-label="Открыть меню"></button>
+      <nav class="page-header__nav">
+        <ul class="site-nav">
+          <li>
+            <a href="#">О проекте</a>
+          </li>
+          <li>
+            <a href="#">Онлайн-курсы</a>
+          </li>
+          <li>
+            <a href="#">Статьи</a>
+          </li>
+        </ul>
+        <a href="#" class="page-header__teachers-link">Преподавателям</a>
+        <button class="user-nav__button" aria-label="Открыть меню"></button>
+        <ul class="user-nav">
+          <li>
+            <a href="#">Регистрация</a>
+          </li>
+          <li>
+            <a href="#">Вход</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    
+  </header>
+  <main class="page-main">
+    <section class="intro">
+      <div class="container intro__wrapper">
+        <div class="intro__content">
+          <h2 class="intro__title"><span>Первая</span>  образовательная онлайн-платформа, созданная преподами!</h2>
+          <p class="intro__text">Описание уникального торгового предложения или же описание названия того или иного продукта, который на первом экран</p>
+          <a href="#" class="intro__button">Зарегистрироваться</a>
+        </div>
+        <a href="#programs" class="intro__link-to-details">Подробнее ниже
+        </a>
+      </div>
+    </section>
+
+    <section id="programs" class="container programs">
+      <p class="programs__users-amount">199 преподавателей уже работает на сайте</p>
+      <h2 class="programs__title">Выберите свою программу</h2>
+      <div class="programs__slider-container">
+        <ul class="programs__list swiper-wrapper">
+          <li class="swiper-slide">
+            <img src="img/offer-1.jpg" alt="Изображение программы" width="413" height="450">
+            <a href="#">
+              <h3 class="program__title">Школьная программа</h3>
+              <h3 class="program__details-link">Подробнее о программе</h3>
+            </a>
+          </li>
+          <li class="swiper-slide">
+            <img src="img/offer-2.jpg" alt="Изображение программы" width="413" height="450">
+            <a href="#">
+              <h3 class="program__title">Студенческая программа</h3>
+              <h3 class="program__details-link">Подробнее о программе</h3>
+            </a>
+          </li>
+          <li class="swiper-slide">
+            <img src="img/offer-3.jpg" alt="Изображение программы" width="413" height="450">
+            <a href="#">
+              <h3 class="program__title">Дополнительное образование</h3>
+              <h3 class="program__details-link">Подробнее о программе</h3>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+
+    </section>
+  </main>
+
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
+  
+</body>
+</html>
